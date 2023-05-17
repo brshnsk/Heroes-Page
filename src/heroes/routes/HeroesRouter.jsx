@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Navbar } from "../../ui/Components/Navbar";
 import { DcPage, MarvelPage, HeroPage, SearchPage} from "../pages"
+import "./HeroesCss.css"
 
 export default function HeroesRouter() {
   return (
