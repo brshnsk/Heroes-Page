@@ -24,7 +24,7 @@ export const SearchPage = () => {
   const onSearchSubmit = (event) => {
     event.preventDefault();
 
-    if(searchText.trim().length <= 1 ) return;
+    if(searchText.trim().length < 1 ) return;
     
     navigate(`?q=${ searchText }`)
   }
@@ -37,8 +37,12 @@ export const SearchPage = () => {
 
       <div className="row">
         <div className="col-5">
-          <h4>Searching...</h4>
-          <hr />
+          {heroes.length < 1 && (
+            <div>
+              <h4 className="fw-normal">Searching...</h4>
+              <hr />
+            </div>
+          )}
           <form onSubmit={ onSearchSubmit }>
             <input
               type="text"
@@ -49,7 +53,7 @@ export const SearchPage = () => {
               value={ searchText }
               onChange={ onInputChange }
             />
-            <button className="btn btn-outline-primary mt-1">Search</button>
+            <button className="btn btn-outline-primary mt-3">Search</button>
           </form>
         </div>
 
