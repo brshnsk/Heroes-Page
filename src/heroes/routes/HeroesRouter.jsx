@@ -1,7 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Navbar } from "../../ui/Components/Navbar";
-import { DcPage, MarvelPage, HeroPage, SearchPage} from "../pages"
-import "./HeroesCss.css"
+import { DcPage, MarvelPage, HeroPage, SearchPage, HomePage} from "../pages"
 
 export default function HeroesRouter() {
   return (
@@ -13,7 +12,7 @@ export default function HeroesRouter() {
                 <Route path="marvel" element={<MarvelPage/>}/>
                 <Route path="dc" element={<DcPage/>}/>
                 
-                <Route path="/" element={<Navigate to="marvel"/>}/>
+                <Route path="/" element={<HomePage/>}/>
 
                 <Route path="search" element={<SearchPage/>}/>
                 <Route path="hero/:id" element={<HeroPage/>}/>

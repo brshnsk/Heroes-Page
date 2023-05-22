@@ -8,7 +8,7 @@ export const HeroesList = ({publisher}) => {
 
   return (
     
-    <div className="row rows-cols-1 row-cols-md-3 g-3">
+    <div className="row row-cols-1 row-cols-md-3 row-cols-sm-1 g-3">
         {
           heroes.map((hero) => (
             <HeroesCard key={hero.id}
